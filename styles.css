@@ -12,10 +12,13 @@ body {
     list-style: inside square;
     font-size: 20px;
     background: white;
-    width: 500px;
-    margin: auto;
-    padding: 0;
+    max-width: 500px;
+    width: 80%;
+    margin: 20px auto;
+    overflow-y: scroll;
+    padding: 20px 0;
     box-shadow: 0 0 0 20px rgba(0, 0, 0, 0.05);
+    height: 70vh;
   }
   #bands li {
     border-bottom: 1px solid #efefef;
