@@ -4,6 +4,13 @@ const bands = [
     'Oh, Sleeper', 'A Skylit Drive', 'Anywhere But Here', 'An Old Dog'
 ]
 
+const sortedBands = sort(bands)
+
+document.querySelector("#bands").innerHTML =
+    sortedBands
+        .map(band => `<li>${band}</li>`)
+        .join("")
+
 function sort(arr) {
     let arrWithoutStartingWords = arr.map(word => {
         let lowercased = word.toLowerCase()
@@ -26,5 +33,3 @@ function sort(arr) {
     let sortedArr = arrWithoutStartingWords.sort((a, b) => a > b ? 1 : -1)
     return sortedArr.map(val => remember[val])
 }
-
-console.log(sort(bands))
